@@ -1,0 +1,19 @@
+
+1. var arr1 = "john".split('');
+   - Here, the variable `arr1` is assigned an array of characters obtained by splitting the string `"john"`. The `split('')` method splits the string into an array of individual characters, resulting in `['j', 'o', 'h', 'n']`.
+
+2. var arr2 = arr1.reverse();
+   - The variable `arr2` is assigned the same array as `arr1`, but with the elements reversed in place. The `reverse()` method modifies the original array and also returns a reference to the modified array. So both `arr1` and `arr2` will point to the same reversed array, which is `['n', 'h', 'o', 'j']`.
+
+3. var arr3 = "jones".split('');
+   - The variable `arr3` is assigned an array of characters obtained by splitting the string `"jones"`. The `split('')` method splits the string into an array of individual characters, resulting in `['j', 'o', 'n', 'e', 's']`.
+
+4. arr2.push(arr3);
+   - The array `arr3` is pushed as a single element to the end of the `arr2` array. As a result, the `arr2` array will become `['n', 'h', 'o', 'j', ['j', 'o', 'n', 'e', 's']]`. This is because arrays are treated as objects, and when an array is pushed into another array, it becomes an element of the outer array.
+
+5. console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+This `console.log` statement prints information about `arr1`. It shows the length of `arr1`, which is `4`, and the last element of `arr1`, which is obtained using the `slice()` method with an argument of `-1`. The `-1` index represents the last element of the array. In this case, the last element of `arr1` is `'n'`.
+
+6. console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));`
+   - This `console.log` statement prints information about `arr2`. It shows the length of `arr2`, which is `5` (including the nested array `arr3`). The last element of `arr2` is also obtained using the `slice()` method with an argument of `-1`, which gives us the nested array `['j', 'o', 'n', 'e', 's']`.
+
