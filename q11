@@ -1,0 +1,28 @@
+The given code has an issue in the reduce() method usage because it does not provide an initial value for the accumulator (acc). 
+
+To fix the issue, we should provide an initial value for the accumulator as an empty object, with properties evens and odds initialized as empty arrays.
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+const result = numbers.reduce((acc, num) => {
+  if (num % 2 === 0) {
+    acc.evens.push(num);
+  } else {
+    acc.odds.push(num);
+  }
+  return acc;
+}, { evens: [], odds: [] });
+
+console.log(result);
+
+
+The reduce() method accumulates the elements of the numbers array into the acc object based on whether they are even or odd.
+
+The accumulator acc is set as { evens: [], odds: [] }, with two empty arrays evens and odds.
+
+reduce() method iterates over the numbers array, it pushes even numbers to the evens array and odd numbers to the odds array.
+
+After the iteration is complete, the result will be an object with two properties: evens and odds. The evens array contains all the even numbers from the original numbers array, and the odds array contains all the odd numbers.
+
+
