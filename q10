@@ -1,0 +1,13 @@
+The console.log(1) and console.log(4) statements are executed synchronously and immediately log their respective numbers.
+
+The setTimeout(printNumber, 0, 2) has a delay of 0 milliseconds, but it is still treated as an asynchronous operation. Since it's scheduled to happen immediately after the current synchronous code, it logs 2 to the console right after 1.
+
+The setTimeout(printNumber, 100, 3) is scheduled to execute after a delay of 100 milliseconds, so it logs 3 to the console after a slight delay from the previous logs.
+
+
+
+OUTPUT 
+1
+4
+3
+2
